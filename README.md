@@ -4,7 +4,6 @@ This is the Minerva Component Library, a versatile component library supporting 
 
 ## Features
 
-- **Cross-platform support**: Web, mobile (React Native), PC (Electron, Tauri)
 - **Module support**: ESM, CommonJS
 - **Version management**: Free and paid versions with usage time calculation
 - **WASM interfaces**: For high-performance computing
@@ -22,10 +21,6 @@ Minerva/
 │   │   │   ├── Button.stories.tsx
 │   │   │   └── index.ts
 │   │   └── ...
-│   ├── platforms/
-│   │   ├── web/
-│   │   ├── react-native/
-│   │   └── electron/
 │   ├── hooks/
 │   ├── utils/
 │   ├── wasm/
