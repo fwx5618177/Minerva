@@ -1,0 +1,122 @@
+$background-color: #1a202c;
+$foreground-color: #ffffff;
+$border-color: #2d3748;
+$text-gray: #a0aec0;
+$primary-gradient-start: #667eea;
+$primary-gradient-end: #764ba2;
+$secondary-gradient-start: #38a169;
+$secondary-gradient-end: #ecc94b;
+
+body {
+    background-color: $background-color;
+    color: $foreground-color;
+    font-family: 'Minerva', sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 16rem;
+    padding: 1rem;
+    border-right: 1px solid $border-color;
+}
+
+.sidebarTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.sidebarDescription {
+    font-size: 0.875rem;
+    color: $text-gray;
+    margin-bottom: 0.5rem;
+}
+
+.nav {
+    margin-bottom: 1rem;
+}
+
+.navHeader {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.navItem {
+    color: $text-gray;
+}
+
+.main {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.headerTitle {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.section {
+    margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.sectionDescription {
+    font-size: 0.875rem;
+    color: $text-gray;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    background: linear-gradient(to right, $primary-gradient-start, $primary-gradient-end);
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    color: $foreground-color;
+}
+
+.cardDescription {
+    font-size: 0.875rem;
+    color: $foreground-color;
+}
+
+.badge {
+    font-size: 0.875rem;
+    background: #38a169;
+    color: $foreground-color;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
