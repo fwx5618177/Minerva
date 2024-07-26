@@ -1,0 +1,13 @@
+{
+  "title": "Minerva Component Library",
+  "description": "Documentation for Minerva Component Library",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-pro"
+  ]
+}
