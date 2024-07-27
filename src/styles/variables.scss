@@ -35,3 +35,19 @@ $zindex-modal-backdrop: 1040;
 $zindex-modal: 1050;
 $zindex-popover: 1060;
 $zindex-tooltip: 1070;
+
+// 媒体查询断点
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+// 弹性支持
+$flex-settings: (
+  display: flex,
+  justify-content: center,
+  align-items: center,
+);

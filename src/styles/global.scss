@@ -63,3 +63,17 @@ h6 {
   margin: 0 auto;
   padding: map-get($spacers, 3);
 }
+
+// 移动端支持
+@media (max-width: map-get($breakpoints, sm)) {
+  .container {
+    padding: map-get($spacers, 2);
+  }
+}
+
+// 弹性化支持
+.flex-center {
+  @each $property, $value in $flex-settings {
+    #{$property}: #{$value};
+  }
+}

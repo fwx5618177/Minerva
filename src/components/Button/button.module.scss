@@ -1,5 +1,3 @@
-@import "../../styles/variables.scss";
-
 .button {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
@@ -23,5 +21,11 @@
 
   &:active {
     background-color: darken(var(--primary-color), 20%);
+  }
+
+  // 移动端支持
+  @media (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.875rem;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
   }
 }
