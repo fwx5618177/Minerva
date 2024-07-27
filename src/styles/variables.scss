@@ -1,21 +1,21 @@
 // Color variables
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$success-color: #28a745;
-$danger-color: #dc3545;
-$warning-color: #ffc107;
-$info-color: #17a2b8;
-$light-color: #f8f9fa;
-$dark-color: #343a40;
+$primary-color: #4a90e2; // 更新后的主色调
+$secondary-color: #50e3c2; // 更新后的次色调
+$success-color: #7ed321; // 成功色调
+$danger-color: #d0021b; // 危险色调
+$warning-color: #f5a623; // 警告色调
+$info-color: #4a90e2; // 信息色调
+$light-color: #f7f7f7; // 浅色调
+$dark-color: #4a4a4a; // 深色调
 
-$background-color: #1a202c;
-$foreground-color: #ffffff;
-$border-color: #2d3748;
-$text-gray: #a0aec0;
-$primary-gradient-start: #667eea;
-$primary-gradient-end: #764ba2;
-$secondary-gradient-start: #38a169;
-$secondary-gradient-end: #ecc94b;
+$background-color: #ffffff; // 背景色
+$foreground-color: #333333; // 前景色
+$border-color: #e1e1e1; // 边框色
+$text-gray: #9b9b9b; // 灰色文本色
+$primary-gradient-start: #6a11cb; // 渐变开始色
+$primary-gradient-end: #2575fc; // 渐变结束色
+$secondary-gradient-start: #42e695; // 次渐变开始色
+$secondary-gradient-end: #3bb2b8; // 次渐变结束色
 
 // Font variables
 $font-family-base: "Helvetica Neue", Arial, sans-serif;
@@ -36,8 +36,8 @@ $spacers: (
 );
 
 // Border variables
-$border-radius: 0.25rem;
-$border-color: #dee2e6;
+$border-radius: 0.5rem; // 更新后的圆角半径
+$border-color: #e1e1e1; // 边框色
 $border-width: 1px;
 
 // Shadow variables

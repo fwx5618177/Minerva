@@ -1,10 +1,9 @@
-@import "./variables.scss";
-
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  color: $dark-color;
+  color: $foreground-color;
+  background-color: $background-color;
   margin: 0;
 }
 
@@ -13,7 +12,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $dark-color;
+    color: $secondary-color;
   }
 }
 
@@ -24,4 +23,56 @@ h4,
 h5,
 h6 {
   font-family: $font-family-base;
+  color: $dark-color;
+}
+
+button {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $foreground-color;
+  background-color: $primary-color;
+  border: none;
+  border-radius: $border-radius;
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+
+  &:active {
+    background-color: darken($primary-color, 20%);
+  }
+}
+
+input,
+textarea {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $foreground-color;
+  background-color: $light-color;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  padding: map-get($spacers, 2);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: map-get($spacers, 3);
 }
