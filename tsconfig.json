@@ -18,7 +18,8 @@
       "@platforms/*": ["src/platforms/*"],
       "@wasm/*": ["src/wasm/*"],
       "@versioning/*": ["src/versioning/*"],
-      "@config/*": ["config/*"]
+      "@config/*": ["config/*"],
+      "@contexts/*": ["src/contexts/*"]
     }
   },
   "include": ["src", "sample", "config", "src/global.d.ts"]

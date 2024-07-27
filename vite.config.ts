@@ -14,6 +14,7 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, "src/styles"),
       "@platforms": path.resolve(__dirname, "src/platforms"),
       "@config": path.resolve(__dirname, "config"),
+      "@contexts": path.resolve(__dirname, "src/contexts"),
     },
   },
   build: isLibBuild
