@@ -1,84 +1,84 @@
 .container {
-    display: flex;
-    min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
 }
 
 .sidebar {
-    width: 16rem;
-    padding: 1rem;
-    border-right: 1px solid $border-color;
+  width: 16rem;
+  padding: 1rem;
+  border-right: 1px solid $border-color;
 }
 
 .sidebarTitle {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .sidebarDescription {
-    font-size: 0.875rem;
-    color: $text-gray;
-    margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: $text-gray;
+  margin-bottom: 0.5rem;
 }
 
 .nav {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .navHeader {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .navItem {
-    color: $text-gray;
+  color: $text-gray;
 }
 
 .main {
-    flex: 1;
-    padding: 1.5rem;
+  flex: 1;
+  padding: 1.5rem;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .headerTitle {
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .headerButtons {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .section {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .sectionHeader {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .sectionTitle {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .sectionDescription {
-    font-size: 0.875rem;
-    color: $text-gray;
+  font-size: 0.875rem;
+  color: $text-gray;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }

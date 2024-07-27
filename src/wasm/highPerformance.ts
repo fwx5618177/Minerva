@@ -1,3 +1,3 @@
 export const highPerformanceFunction = () => {
-  return 'Hello, World!';
+  return "Hello, World!";
 };

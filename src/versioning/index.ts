@@ -1,2 +1,2 @@
-export { freeVersion } from './freeVersion';
-export { paidVersion } from './paidVersion';
+export { freeVersion } from "./freeVersion";
+export { paidVersion } from "./paidVersion";

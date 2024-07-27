@@ -1,17 +1,17 @@
 .button {
-    padding: $spacer;
-    background-color: $primary-color;
-    color: #fff;
-    border: none;
-    border-radius: $border-radius;
-    cursor: pointer;
-    font-size: $font-size-base;
+  padding: $spacer;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: $font-size-base;
 
-    &:hover {
-        background-color: darken($primary-color, 10%);
-    }
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
 
-    &:active {
-        background-color: darken($primary-color, 20%);
-    }
+  &:active {
+    background-color: darken($primary-color, 20%);
+  }
 }
