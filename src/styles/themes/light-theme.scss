@@ -1,0 +1,34 @@
+// 浅色主题颜色变量
+$light-theme: (
+  primary-color: #4a90e2,
+  // 主色调
+  secondary-color: #50e3c2,
+  // 次色调
+  success-color: #7ed321,
+  // 成功色调
+  danger-color: #d0021b,
+  // 危险色调
+  warning-color: #f5a623,
+  // 警告色调
+  info-color: #4a90e2,
+  // 信息色调
+  light-color: #f7f7f7,
+  // 浅色调
+  dark-color: #4a4a4a,
+  // 深色调
+  background-color: #ffffff,
+  // 背景色
+  foreground-color: #333333,
+  // 前景色
+  border-color: #e1e1e1,
+  // 边框色
+  text-gray: #9b9b9b,
+  // 灰色文本色
+  primary-gradient-start: #6a11cb,
+  // 渐变开始色
+  primary-gradient-end: #2575fc,
+  // 渐变结束色
+  secondary-gradient-start: #42e695,
+  // 次渐变开始色
+  secondary-gradient-end: #3bb2b8 // 次渐变结束色,,
+);

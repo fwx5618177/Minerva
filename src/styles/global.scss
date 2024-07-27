@@ -1,18 +1,50 @@
+@import "./variables.scss";
+
+// 默认主题
+$theme: $light-theme;
+
+// 媒体查询：检测暗黑模式
+@media (prefers-color-scheme: dark) {
+  $theme: $dark-theme;
+}
+
+:root {
+  --primary-color: #{map-get($theme, primary-color)};
+  --secondary-color: #{map-get($theme, secondary-color)};
+  --success-color: #{map-get($theme, success-color)};
+  --danger-color: #{map-get($theme, danger-color)};
+  --warning-color: #{map-get($theme, warning-color)};
+  --info-color: #{map-get($theme, info-color)};
+  --light-color: #{map-get($theme, light-color)};
+  --dark-color: #{map-get($theme, dark-color)};
+  --background-color: #{map-get($theme, background-color)};
+  --foreground-color: #{map-get($theme, foreground-color)};
+  --border-color: #{map-get($theme, border-color)};
+  --text-gray: #{map-get($theme, text-gray)};
+  --font-family-base: #{$font-family-base};
+  --font-size-base: #{$font-size-base};
+  --line-height-base: #{$line-height-base};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+  --border-radius: #{$border-radius};
+  --box-shadow: #{$box-shadow};
+}
+
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $foreground-color;
-  background-color: $background-color;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--foreground-color);
+  background-color: var(--background-color);
   margin: 0;
 }
 
 a {
-  color: $primary-color;
+  color: var(--primary-color);
   text-decoration: none;
 
   &:hover {
-    color: $secondary-color;
+    color: var(--secondary-color);
   }
 }
 
@@ -22,53 +54,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-base;
-  color: $dark-color;
-}
-
-button {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $foreground-color;
-  background-color: $primary-color;
-  border: none;
-  border-radius: $border-radius;
-  padding: map-get($spacers, 2) map-get($spacers, 3);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: darken($primary-color, 10%);
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
-  }
-
-  &:active {
-    background-color: darken($primary-color, 20%);
-  }
-}
-
-input,
-textarea {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $foreground-color;
-  background-color: $light-color;
-  border: $border-width solid $border-color;
-  border-radius: $border-radius;
-  padding: map-get($spacers, 2);
-  transition: border-color 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: $primary-color;
-    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
-  }
+  font-family: var(--font-family-base);
+  color: var(--dark-color);
 }
 
 .container {

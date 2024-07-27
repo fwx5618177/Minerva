@@ -1,17 +1,27 @@
+@import "../../styles/variables.scss";
+
 .button {
-  padding: $spacer;
-  background-color: $primary-color;
-  color: #fff;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--foreground-color);
+  background-color: var(--primary-color);
   border: none;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
+  padding: map-get($spacers, 2) map-get($spacers, 3);
   cursor: pointer;
-  font-size: $font-size-base;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: darken(var(--primary-color), 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color), 0.25);
   }
 
   &:active {
-    background-color: darken($primary-color, 20%);
+    background-color: darken(var(--primary-color), 20%);
   }
 }

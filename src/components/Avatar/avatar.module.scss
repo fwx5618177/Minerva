@@ -2,9 +2,9 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  border: $border-width solid $border-color;
+  border: $border-width solid var(--border-color);
   border-radius: 50%;
-  background-color: $light-color;
+  background-color: var(--background-color);
   width: 2.5rem;
   height: 2.5rem;
 }

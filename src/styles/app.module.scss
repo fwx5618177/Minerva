@@ -6,7 +6,7 @@
 .sidebar {
   width: 16rem;
   padding: 1rem;
-  border-right: 1px solid $border-color;
+  border-right: 1px solid var(--border-color);
 }
 
 .sidebarTitle {
@@ -17,7 +17,7 @@
 
 .sidebarDescription {
   font-size: 0.875rem;
-  color: $text-gray;
+  color: var(--text-gray);
   margin-bottom: 0.5rem;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .navItem {
-  color: $text-gray;
+  color: var(--text-gray);
 }
 
 .main {
@@ -74,7 +74,7 @@
 
 .sectionDescription {
   font-size: 0.875rem;
-  color: $text-gray;
+  color: var(--text-gray);
 }
 
 .cards {
