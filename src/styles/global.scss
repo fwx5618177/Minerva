@@ -95,16 +95,6 @@ h6 {
   color: var(--dark-color);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: map-get($spacers, 3);
-
-  @media (max-width: map-get($breakpoints, sm)) {
-    padding: map-get($spacers, 2);
-  }
-}
-
 // 弹性化支持
 .flex-center {
   @each $property, $value in $flex-settings {

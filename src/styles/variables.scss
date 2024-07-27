@@ -23,9 +23,18 @@ $font-sizes: (
   xl: 1.25rem
 );
 
-// Avatar 组件相关变量
-$avatar-font-size: $font-size-base * 0.875; // Avatar 组件的字体大小
-$avatar-group-margin-left: $font-size-base * 0.625; // AvatarGroup 组件的间距
+$scale-multiplier: (
+  // 小屏幕字体大小
+  xs: 0.75,
+  // 中小屏幕字体大小
+  sm: 0.875,
+  // 中屏幕字体大小
+  md: 1,
+  // 大屏幕字体大小
+  lg: 1.125,
+  // 超大屏幕字体大小
+  xl: 1.25
+);
 
 // 间距变量
 $spacer: 1rem; // 基础间距

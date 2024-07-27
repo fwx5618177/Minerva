@@ -34,13 +34,13 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  font-size: $avatar-font-size;
+  font-size: $font-size-base * 0.875;
   text-align: center;
   transform: translate(-50%, -50%) scale(0.65);
   white-space: nowrap;
   user-select: none;
 
   @media (max-width: map-get($breakpoints, sm)) {
-    font-size: $avatar-font-size * 0.75;
+    font-size: $font-size-base * 0.875 * map-get($scale-multiplier, xs);
   }
 }

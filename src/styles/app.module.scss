@@ -1,6 +1,11 @@
 .container {
-  display: flex;
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: map-get($spacers, 3);
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    padding: map-get($spacers, 2);
+  }
 }
 
 .sidebar {

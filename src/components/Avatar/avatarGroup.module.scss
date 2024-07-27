@@ -8,7 +8,7 @@
 }
 
 .avatarGroupItem {
-  margin-left: $avatar-group-margin-left;
+  margin-left: $font-size-base * 0.625;
 
   @media (max-width: map-get($breakpoints, sm)) {
     margin-left: 0;
