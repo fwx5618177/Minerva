@@ -4,22 +4,23 @@
 
 // 字体变量
 $font-family-base: "Helvetica Neue", Arial, sans-serif; // 基础字体
-$font-size-base: 16px; // 基础字体大小
+$font-size-base: 1rem; // 基础字体大小，使用 rem 单位
 $line-height-base: 1.5; // 基础行高
 $font-weight-normal: 400; // 正常字体粗细
 $font-weight-bold: 700; // 加粗字体粗细
 
 // 字体大小变量（响应式）
 $font-sizes: (
-  xs: $font-size-base * 0.75,
   // 小屏幕字体大小
-  sm: $font-size-base * 0.875,
+  xs: $font-size-base * 0.75,
   // 中小屏幕字体大小
-  md: $font-size-base,
+  sm: $font-size-base * 0.875,
   // 中屏幕字体大小
-  lg: $font-size-base * 1.125,
+  md: $font-size-base,
   // 大屏幕字体大小
-  xl: $font-size-base * 1.25 // 超大屏幕字体大小,,
+  lg: $font-size-base * 1.125,
+  // 超大屏幕字体大小
+  xl: $font-size-base * 1.25
 );
 
 // 间距变量

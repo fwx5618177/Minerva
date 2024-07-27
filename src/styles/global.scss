@@ -1,4 +1,6 @@
 @import "./variables.scss";
+@import "./themes/light-theme";
+@import "./themes/dark-theme";
 
 // 默认主题
 $theme: $light-theme;
@@ -8,7 +10,9 @@ $theme: $light-theme;
   $theme: $dark-theme;
 }
 
+// 设置 CSS 变量
 :root {
+  // 主题颜色变量
   --primary-color: #{map-get($theme, primary-color)};
   --secondary-color: #{map-get($theme, secondary-color)};
   --success-color: #{map-get($theme, success-color)};
@@ -21,13 +25,54 @@ $theme: $light-theme;
   --foreground-color: #{map-get($theme, foreground-color)};
   --border-color: #{map-get($theme, border-color)};
   --text-gray: #{map-get($theme, text-gray)};
+
+  // 字体和间距变量
   --font-family-base: #{$font-family-base};
-  --font-size-base: #{$font-size-base};
+  --font-size-xs: #{map-get($font-sizes, xs)};
+  --font-size-sm: #{map-get($font-sizes, sm)};
+  --font-size-md: #{map-get($font-sizes, md)};
+  --font-size-lg: #{map-get($font-sizes, lg)};
+  --font-size-xl: #{map-get($font-sizes, xl)};
   --line-height-base: #{$line-height-base};
   --font-weight-normal: #{$font-weight-normal};
   --font-weight-bold: #{$font-weight-bold};
   --border-radius: #{$border-radius};
   --box-shadow: #{$box-shadow};
+
+  // 组件特定的变量
+  --avatar-font-size: calc(var(--font-size-base) * 0.875); // Avatar 组件的字体大小
+  --avatar-group-margin-left: calc(var(--font-size-base) * 0.625); // AvatarGroup 组件的间距
+}
+
+// 字体大小响应式支持
+@media (max-width: map-get($breakpoints, sm)) {
+  :root {
+    --font-size-base: var(--font-size-xs);
+  }
+}
+
+@media (min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md)) {
+  :root {
+    --font-size-base: var(--font-size-sm);
+  }
+}
+
+@media (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)) {
+  :root {
+    --font-size-base: var(--font-size-md);
+  }
+}
+
+@media (min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, xl)) {
+  :root {
+    --font-size-base: var(--font-size-lg);
+  }
+}
+
+@media (min-width: map-get($breakpoints, xl)) {
+  :root {
+    --font-size-base: var(--font-size-xl);
+  }
 }
 
 body {
