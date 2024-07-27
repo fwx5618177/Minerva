@@ -3,6 +3,7 @@ body {
     font-size: $font-size-base;
     line-height: $line-height-base;
     color: $dark-color;
+    margin: 0;
 }
 
 a {
@@ -12,4 +13,13 @@ a {
     &:hover {
         color: $dark-color;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family;
 }

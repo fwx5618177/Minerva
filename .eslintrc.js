@@ -1,25 +1,33 @@
+const { env } = require("process");
+
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  parser: "@typescript-eslint/parser",
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
   ],
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module',
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
   },
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
   },
   rules: {
-    'react/prop-types': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
   },
 };
