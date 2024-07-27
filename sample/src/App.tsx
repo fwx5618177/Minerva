@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "./App.module.scss";
-import { Avatar, AvatarImage, AvatarFallback } from "@components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@components/Avatar/Avatar";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from "@components/ui/card";
-import { Badge } from "@components/ui/badge";
-import { LogInIcon, MailsIcon, SearchIcon } from "@components/ui/icons";
+} from "@components/Card/Card";
+import { Badge } from "@components/Badge";
+import { LogInIcon, MailsIcon, SearchIcon } from "@components/UI/icons";
+import styles from "@styles/app.module.scss";
 
 const App: React.FC = () => {
   return (
