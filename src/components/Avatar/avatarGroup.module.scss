@@ -8,7 +8,7 @@
 }
 
 .avatarGroupItem {
-  margin-left: var(--avatar-group-margin-left);
+  margin-left: $avatar-group-margin-left;
 
   @media (max-width: map-get($breakpoints, sm)) {
     margin-left: 0;
@@ -17,13 +17,13 @@
 }
 
 .count {
-  font-size: var(--font-size-base) * 0.875;
+  font-size: $font-size-base * 0.875;
   display: inline-flex;
   align-items: center;
   padding-left: 0.5rem;
   color: var(--secondary-color);
 
   @media (max-width: map-get($breakpoints, sm)) {
-    font-size: 0.75rem;
+    font-size: $font-size-base * 0.75;
   }
 }

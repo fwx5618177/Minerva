@@ -30,13 +30,13 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  font-size: var(--avatar-font-size);
+  font-size: $avatar-font-size;
   text-align: center;
   transform: translate(-50%, -50%) scale(0.65);
   white-space: nowrap;
   user-select: none;
 
   @media (max-width: map-get($breakpoints, sm)) {
-    font-size: calc(var(--avatar-font-size) * 0.75);
+    font-size: $avatar-font-size * 0.75;
   }
 }

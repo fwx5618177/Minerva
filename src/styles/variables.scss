@@ -12,16 +12,20 @@ $font-weight-bold: 700; // 加粗字体粗细
 // 字体大小变量（响应式）
 $font-sizes: (
   // 小屏幕字体大小
-  xs: $font-size-base * 0.75,
+  xs: 0.75rem,
   // 中小屏幕字体大小
-  sm: $font-size-base * 0.875,
+  sm: 0.875rem,
   // 中屏幕字体大小
-  md: $font-size-base,
+  md: 1rem,
   // 大屏幕字体大小
-  lg: $font-size-base * 1.125,
+  lg: 1.125rem,
   // 超大屏幕字体大小
-  xl: $font-size-base * 1.25
+  xl: 1.25rem
 );
+
+// Avatar 组件相关变量
+$avatar-font-size: $font-size-base * 0.875; // Avatar 组件的字体大小
+$avatar-group-margin-left: $font-size-base * 0.625; // AvatarGroup 组件的间距
 
 // 间距变量
 $spacer: 1rem; // 基础间距

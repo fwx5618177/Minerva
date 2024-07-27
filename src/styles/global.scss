@@ -25,56 +25,44 @@ $theme: $light-theme;
   --foreground-color: #{map-get($theme, foreground-color)};
   --border-color: #{map-get($theme, border-color)};
   --text-gray: #{map-get($theme, text-gray)};
-
-  // 字体和间距变量
   --font-family-base: #{$font-family-base};
-  --font-size-xs: #{map-get($font-sizes, xs)};
-  --font-size-sm: #{map-get($font-sizes, sm)};
-  --font-size-md: #{map-get($font-sizes, md)};
-  --font-size-lg: #{map-get($font-sizes, lg)};
-  --font-size-xl: #{map-get($font-sizes, xl)};
   --line-height-base: #{$line-height-base};
   --font-weight-normal: #{$font-weight-normal};
   --font-weight-bold: #{$font-weight-bold};
   --border-radius: #{$border-radius};
   --box-shadow: #{$box-shadow};
-
-  // 组件特定的变量
-  --avatar-font-size: calc(var(--font-size-base) * 0.875); // Avatar 组件的字体大小
-  --avatar-group-margin-left: calc(var(--font-size-base) * 0.625); // AvatarGroup 组件的间距
 }
 
 // 字体大小响应式支持
 @media (max-width: map-get($breakpoints, sm)) {
   :root {
-    --font-size-base: var(--font-size-xs);
+    --font-size-base: #{map-get($font-sizes, xs)};
   }
 }
 
 @media (min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, md)) {
   :root {
-    --font-size-base: var(--font-size-sm);
+    --font-size-base: #{map-get($font-sizes, sm)};
   }
 }
 
 @media (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)) {
   :root {
-    --font-size-base: var(--font-size-md);
+    --font-size-base: #{map-get($font-sizes, md)};
   }
 }
 
 @media (min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, xl)) {
   :root {
-    --font-size-base: var(--font-size-lg);
+    --font-size-base: #{map-get($font-sizes, lg)};
   }
 }
 
 @media (min-width: map-get($breakpoints, xl)) {
   :root {
-    --font-size-base: var(--font-size-xl);
+    --font-size-base: #{map-get($font-sizes, xl)};
   }
 }
-
 body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
