@@ -63,6 +63,7 @@ $theme: $light-theme;
     --font-size-base: #{map-get($font-sizes, xl)};
   }
 }
+
 body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);

@@ -17,12 +17,16 @@
   }
 }
 
+.avatarSquare {
+  border-radius: 0.25rem;
+}
+
 .avatarImg {
   display: inline-block;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: inherit;
   user-select: none;
 }
 

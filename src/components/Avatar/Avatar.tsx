@@ -10,11 +10,10 @@ const Avatar: React.FC<AvatarProps> = ({
   ...props
 }) => {
   const showText = !src;
-  const radius = isSquare ? "0.25rem" : "50%";
-  const avatarClasses = `${styles.avatar} ${className}`;
+  const avatarClasses = `${styles.avatar} ${isSquare ? styles.avatarSquare : ""} ${className}`;
 
   return (
-    <span className={avatarClasses} style={{ borderRadius: radius }} {...props}>
+    <span className={avatarClasses} {...props}>
       {!showText && (
         <img
           alt="avatar"
