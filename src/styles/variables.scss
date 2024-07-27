@@ -9,6 +9,19 @@ $line-height-base: 1.5; // 基础行高
 $font-weight-normal: 400; // 正常字体粗细
 $font-weight-bold: 700; // 加粗字体粗细
 
+// 字体大小变量（响应式）
+$font-sizes: (
+  xs: $font-size-base * 0.75,
+  // 小屏幕字体大小
+  sm: $font-size-base * 0.875,
+  // 中小屏幕字体大小
+  md: $font-size-base,
+  // 中屏幕字体大小
+  lg: $font-size-base * 1.125,
+  // 大屏幕字体大小
+  xl: $font-size-base * 1.25 // 超大屏幕字体大小,,
+);
+
 // 间距变量
 $spacer: 1rem; // 基础间距
 $spacers: (

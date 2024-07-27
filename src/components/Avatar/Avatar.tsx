@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./avatar.module.scss";
 import { AvatarProps } from "./types";
+import styles from "./avatar.module.scss";
 
 const Avatar: React.FC<AvatarProps> = ({
   src,

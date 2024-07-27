@@ -37,6 +37,9 @@ body {
   color: var(--foreground-color);
   background-color: var(--background-color);
   margin: 0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 a {
@@ -62,11 +65,8 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: map-get($spacers, 3);
-}
 
-// 移动端支持
-@media (max-width: map-get($breakpoints, sm)) {
-  .container {
+  @media (max-width: map-get($breakpoints, sm)) {
     padding: map-get($spacers, 2);
   }
 }
