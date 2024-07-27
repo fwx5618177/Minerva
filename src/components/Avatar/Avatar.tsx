@@ -1,19 +1,31 @@
 import React from "react";
-import type {
-  AvatarProps,
-  AvatarFallbackProps,
-  AvatarImageProps,
-} from "./types";
 import styles from "./avatar.module.scss";
+import { AvatarProps } from "./types";
 
-export const Avatar: React.FC<AvatarProps> = ({ children }) => {
-  return <div className={styles.avatar}>{children}</div>;
+const Avatar: React.FC<AvatarProps> = ({
+  src,
+  text = "",
+  isSquare = false,
+  className = "",
+  ...props
+}) => {
+  const showText = !src;
+  const radius = isSquare ? "0.25rem" : "50%";
+  const avatarClasses = `${styles.avatar} ${className}`;
+
+  return (
+    <span className={avatarClasses} style={{ borderRadius: radius }} {...props}>
+      {!showText && (
+        <img
+          alt="avatar"
+          className={styles.avatarImg}
+          src={src}
+          draggable={false}
+        />
+      )}
+      {showText && <span className={styles.avatarText}>{text}</span>}
+    </span>
+  );
 };
 
-export const AvatarImage: React.FC<AvatarImageProps> = ({ src }) => {
-  return <img className={styles.avatarImage} src={src} alt="avatar" />;
-};
-
-export const AvatarFallback: React.FC<AvatarFallbackProps> = ({ children }) => {
-  return <div className={styles.avatarFallback}>{children}</div>;
-};
+export default Avatar;

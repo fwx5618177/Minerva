@@ -1,17 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
-import type {
-  AvatarProps,
-  AvatarFallbackProps,
-  AvatarImageProps,
-} from "./types";
+import Avatar from "./Avatar";
+import AvatarGroup from "./AvatarGroup";
+import type { AvatarProps, AvatarGroupProps } from "./types";
 
-export {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-  AvatarProps,
-  AvatarFallbackProps,
-  AvatarImageProps,
-};
+export { Avatar, AvatarGroup, AvatarProps, AvatarGroupProps };
 
 export default Avatar;

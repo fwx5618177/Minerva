@@ -1,0 +1,16 @@
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatarGroupItem {
+  margin-left: -0.625rem;
+}
+
+.count {
+  font-size: $font-size-base * 0.875;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  color: $secondary-color;
+}

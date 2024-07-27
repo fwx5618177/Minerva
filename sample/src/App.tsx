@@ -1,177 +1,80 @@
 import React from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@components/Avatar/Avatar";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@components/Card/Card";
-import { Badge } from "@components/Badge";
+import Avatar from "@components/Avatar";
+import { AvatarGroup } from "@components/Avatar";
 import { LogInIcon, MailsIcon, SearchIcon } from "@components/UI/icons";
-import styles from "@styles/app.module.scss";
+
+import "@styles/app.module.scss";
 
 const App: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <aside className={styles.sidebar}>
-        <div className={styles.sidebarTitle}>Minerva</div>
-        <div className={styles.sidebarDescription}>Minerva UI v5.16.4</div>
-        <nav className={styles.nav}>
-          <div className={styles.navHeader}>Getting started</div>
-          <div className={styles.navHeader}>Components</div>
+    <div className="container">
+      <aside className="sidebar">
+        <div className="sidebarTitle">Minerva</div>
+        <div className="sidebarDescription">Material UI v5.16.4</div>
+        <nav className="nav">
+          <div className="navHeader">Getting started</div>
+          <div className="navHeader">Components</div>
           <ul>
-            <li className={styles.navItem}>All components</li>
-            <li className={styles.navItem}>Inputs</li>
-            <li className={styles.navItem}>Autocomplete</li>
-            <li className={styles.navItem}>Button</li>
-            <li className={styles.navItem}>Button Group</li>
-            <li className={styles.navItem}>Checkbox</li>
-            <li className={styles.navItem}>Floating Action Button</li>
-            <li className={styles.navItem}>Radio Group</li>
-            <li className={styles.navItem}>Rating</li>
-            <li className={styles.navItem}>Select</li>
-            <li className={styles.navItem}>Slider</li>
-            <li className={styles.navItem}>Switch</li>
-            <li className={styles.navItem}>Text Field</li>
-            <li className={styles.navItem}>Transfer List</li>
-            <li className={styles.navItem}>Toggle Button</li>
+            <li className="navItem">All components</li>
+            <li className="navItem">Inputs</li>
+            <li className="navItem">Autocomplete</li>
+            <li className="navItem">Button</li>
+            <li className="navItem">Button Group</li>
+            <li className="navItem">Checkbox</li>
+            <li className="navItem">Floating Action Button</li>
+            <li className="navItem">Radio Group</li>
+            <li className="navItem">Rating</li>
+            <li className="navItem">Select</li>
+            <li className="navItem">Slider</li>
+            <li className="navItem">Switch</li>
+            <li className="navItem">Text Field</li>
+            <li className="navItem">Transfer List</li>
+            <li className="navItem">Toggle Button</li>
           </ul>
-          <div className={styles.navHeader}>Data Display</div>
+          <div className="navHeader">Data Display</div>
           <ul>
-            <li className={styles.navItem}>Avatar</li>
-            <li className={styles.navItem}>Badge</li>
-            <li className={styles.navItem}>Chip</li>
-            <li className={styles.navItem}>Divider</li>
-            <li className={styles.navItem}>Icons</li>
-            <li className={styles.navItem}>Minerva Icons</li>
-            <li className={styles.navItem}>List</li>
-            <li className={styles.navItem}>Table</li>
-            <li className={styles.navItem}>Tooltip</li>
-            <li className={styles.navItem}>Typography</li>
+            <li className="navItem">Avatar</li>
+            <li className="navItem">Badge</li>
+            <li className="navItem">Chip</li>
+            <li className="navItem">Divider</li>
+            <li className="navItem">Icons</li>
+            <li className="navItem">Material Icons</li>
+            <li className="navItem">List</li>
+            <li className="navItem">Table</li>
+            <li className="navItem">Tooltip</li>
+            <li className="navItem">Typography</li>
           </ul>
         </nav>
       </aside>
-      <main className={styles.main}>
-        <header className={styles.header}>
-          <h1 className={styles.headerTitle}>Minerva UI components</h1>
-          <div className={styles.headerButtons}>
-            <button className={styles.iconButton}>
-              <SearchIcon className={styles.icon} />
+      <main className="main">
+        <header className="header">
+          <h1 className="headerTitle">Material UI components</h1>
+          <div className="headerButtons">
+            <button className="iconButton">
+              <SearchIcon className="icon" />
             </button>
-            <button className={styles.iconButton}>
-              <MailsIcon className={styles.icon} />
+            <button className="iconButton">
+              <MailsIcon className="icon" />
             </button>
-            <Avatar>
-              <AvatarImage src="/placeholder-user.jpg" />
-              <AvatarFallback>U</AvatarFallback>
-            </Avatar>
+            <Avatar src="/placeholder-user.jpg" />
           </div>
         </header>
-        <section className={styles.section}>
-          <div className={styles.sectionHeader}>
-            <div className={styles.iconWrapper}>
-              <LogInIcon className={styles.iconLarge} />
+        <section className="section">
+          <div className="sectionHeader">
+            <div className="iconWrapper">
+              <LogInIcon className="iconLarge" />
             </div>
             <div>
-              <h2 className={styles.sectionTitle}>
+              <h2 className="sectionTitle">
                 Design and Development tips in your inbox. Every weekday.
               </h2>
-              <p className={styles.sectionDescription}>Ads via Carbon</p>
+              <p className="sectionDescription">Ads via Carbon</p>
             </div>
           </div>
         </section>
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Inputs</h2>
-          <div className={styles.cards}>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Autocomplete</CardTitle>
-                <CardDescription className={styles.cardDescription}>
-                  No guidelines
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Button</CardTitle>
-                <Badge className={styles.badge}>MD2</Badge>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Button Group</CardTitle>
-                <CardDescription className={styles.cardDescription}>
-                  No guidelines
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Checkbox</CardTitle>
-                <Badge className={styles.badge}>MD2</Badge>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>
-                  Floating Action Button
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Radio Group</CardTitle>
-                <Badge className={styles.badge}>MD2</Badge>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Rating</CardTitle>
-                <CardDescription className={styles.cardDescription}>
-                  No guidelines
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Select</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-            <Card className={styles.card}>
-              <CardHeader>
-                <CardTitle className={styles.cardTitle}>Slider</CardTitle>
-                <Badge className={styles.badge}>MD2</Badge>
-              </CardHeader>
-              <CardContent>
-                <div className={styles.cardContent} />
-              </CardContent>
-            </Card>
-          </div>
+        <section className="section">
+          <h2 className="sectionTitle">Inputs</h2>
+          <div className="cards">{/* 卡片组件的代码 */}</div>
         </section>
       </main>
     </div>
