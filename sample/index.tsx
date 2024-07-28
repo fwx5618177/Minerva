@@ -10,9 +10,7 @@ const container = document.getElementById("root");
 const root = createRoot(container!);
 
 root.render(
-  <StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </StrictMode>,
+  <ThemeProvider theme="">
+    <App />
+  </ThemeProvider>,
 );

@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 type customTheme = "github-dark";
 
@@ -54,25 +60,46 @@ const applyCustomTheme = (customTheme?: CustomThemeProps | null) => {
   }
 };
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [customTheme, setCustomTheme] = useState<CustomThemeProps | null>(null);
+const useThemeHook = (
+  initialTheme: Theme,
+  initialCustomTheme?: CustomThemeProps,
+) => {
+  const [theme, setThemeState] = useState<Theme>(initialTheme);
+  const [customTheme, setCustomThemeState] = useState<CustomThemeProps | null>(
+    initialCustomTheme || null,
+  );
 
-  const applyTheme = (theme: Theme, customTheme?: CustomThemeProps) => {
-    setTheme(theme);
+  const setTheme = (newTheme: Theme, customTheme?: CustomThemeProps) => {
+    setThemeState(newTheme);
     if (customTheme) {
-      setCustomTheme(customTheme);
+      setCustomThemeState(customTheme);
       applyCustomTheme(customTheme);
     } else {
-      setCustomTheme(null);
+      setCustomThemeState(null);
       applyCustomTheme();
     }
   };
 
+  useEffect(() => {
+    if (theme === "custom" && customTheme) {
+      applyCustomTheme(customTheme);
+    } else {
+      applyCustomTheme();
+    }
+  }, [theme, customTheme]);
+
+  return { theme, setTheme, customTheme };
+};
+
+export const ThemeProvider: React.FC<{
+  children: ReactNode;
+  initialTheme?: Theme;
+  customTheme?: CustomThemeProps;
+}> = ({ children, initialTheme = "light", customTheme = null }) => {
+  const themeContextValue = useThemeHook(initialTheme, customTheme);
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: applyTheme, customTheme }}>
+    <ThemeContext.Provider value={themeContextValue}>
       {children}
     </ThemeContext.Provider>
   );
