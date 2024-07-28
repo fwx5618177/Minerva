@@ -1,6 +1,8 @@
 import React from "react";
+
 import { AvatarProps } from "./types";
 import styles from "./avatar.module.scss";
+import { useI18n } from "@hooks/index";
 
 const Avatar: React.FC<AvatarProps> = ({
   src,
@@ -9,6 +11,7 @@ const Avatar: React.FC<AvatarProps> = ({
   className = "",
   ...props
 }) => {
+  const { t } = useI18n();
   const showText = !src;
   const avatarClasses = `${styles.avatar} ${isSquare ? styles.avatarSquare : ""} ${className}`;
 
@@ -22,7 +25,9 @@ const Avatar: React.FC<AvatarProps> = ({
           draggable={false}
         />
       )}
-      {showText && <span className={styles.avatarText}>{text}</span>}
+      {showText && (
+        <span className={styles.avatarText}>{text || t("avatar:default")}</span>
+      )}
     </span>
   );
 };

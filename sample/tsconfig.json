@@ -11,16 +11,11 @@
     "baseUrl": "./",
     "resolveJsonModule": true,
     "paths": {
-      "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
       "@styles/*": ["src/styles/*"],
-      "@platforms/*": ["src/platforms/*"],
-      "@wasm/*": ["src/wasm/*"],
-      "@versioning/*": ["src/versioning/*"],
-      "@config/*": ["src/config/*"],
-      "@contexts/*": ["src/contexts/*"]
+      "@config/*": ["src/config/*"]
     }
   },
-  "include": ["src", "src/global.d.ts"]
+  "include": ["src", "../src"]
 }

@@ -3,7 +3,9 @@ import { ConfigContextProps, ConfigContextProviderProps } from "./types";
 import useAutoTheme from "@hooks/useAutoTheme";
 import useLocale from "@hooks/useLocale";
 
-const ConfigContext = createContext<ConfigContextProps | undefined>(undefined);
+export const ConfigContext = createContext<ConfigContextProps | undefined>(
+  undefined,
+);
 
 export const useConfig = (): ConfigContextProps => {
   const context = useContext(ConfigContext);

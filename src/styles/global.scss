@@ -7,6 +7,8 @@
   --btn-bg-color-danger: var(--danger-color); // 按钮危险背景色
   --btn-bg-color-warning: var(--warning-color); // 按钮警告背景色
   --btn-bg-color-info: var(--info-color); // 按钮信息背景色
+  --btn-bg-color-hover: darken(var(--primary-color), 10%); // 按钮悬停背景色
+  --btn-bg-color-active: darken(var(--primary-color), 20%); // 按钮激活背景色
 
   // avatar
   --avatar-bg-color-info: var(--info-color); // 头像信息背景色
@@ -16,6 +18,7 @@
 
   // card
   --card-bg-color: var(--light-color); // 卡片背景色
+  --card-bg-color-content: lighten(var(--card-bg-color), 10%); // 卡片背景渐变色
   --card-border-color: var(--border-color); // 卡片边框色
 }
 

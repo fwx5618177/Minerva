@@ -4,7 +4,7 @@
   overflow: hidden;
   border: var(--border-width) solid var(--border-color);
   border-radius: 50%;
-  background-color: var(--light-color);
+  background-color: var(--avatar-bg-color-info);
   width: 3rem;
   height: 3rem;
   transition:
@@ -34,13 +34,13 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  font-size: $font-size-base * 0.875;
+  font-size: calc(var(--font-size-base) * 0.875);
   text-align: center;
   transform: translate(-50%, -50%) scale(0.65);
   white-space: nowrap;
   user-select: none;
 
   @media (max-width: map-get($breakpoints, sm)) {
-    font-size: $font-size-base * 0.875 * map-get($scale-multiplier, xs);
+    font-size: calc(var(--font-size-base) * 0.875 * map-get($scale-multiplier, xs));
   }
 }

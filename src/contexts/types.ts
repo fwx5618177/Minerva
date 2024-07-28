@@ -29,11 +29,16 @@ export interface ComponentThemeProps {
   "btn-bg-color-danger": string;
   "btn-bg-color-warning": string;
   "btn-bg-color-info": string;
+  "btn-bg-color-hover": string;
+  "btn-bg-color-active": string;
+
   "avatar-bg-color-info": string;
   "avatar-bg-color-success": string;
   "avatar-bg-color-danger": string;
   "avatar-bg-color-warning": string;
+
   "card-bg-color": string;
+  "card-bg-color-content": string;
   "card-border-color": string;
 }
 

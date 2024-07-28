@@ -6,33 +6,16 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@components": path.resolve(__dirname, "src/components"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@utils": path.resolve(__dirname, "src/utils"),
       "@styles": path.resolve(__dirname, "src/styles"),
-      "@platforms": path.resolve(__dirname, "src/platforms"),
       "@config": path.resolve(__dirname, "src/config"),
-      "@contexts": path.resolve(__dirname, "src/contexts"),
     },
   },
   build: {
-    lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: "MinervaComponentLibrary",
-      fileName: (format) => `minerva-component-library.${format}.js`,
-      formats: ["es", "cjs"],
-    },
+    outDir: "dist",
     rollupOptions: {
-      external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "react-native": "ReactNative",
-        },
-        dir: "lib",
-        format: "esm",
-      },
+      input: path.resolve(__dirname, "index.html"),
     },
   },
   css: {
