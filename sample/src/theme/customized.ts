@@ -1,4 +1,6 @@
-export const Skeleton = {
+import { ComponentTheme } from "@contexts/types";
+
+export const BaseTheme: ComponentTheme = {
   "primary-color": "#58a6ff",
   "secondary-color": "#1f6feb",
   "success-color": "#56d364",
@@ -15,4 +17,11 @@ export const Skeleton = {
   "primary-gradient-end": "#1f6feb",
   "secondary-gradient-start": "#1f6feb",
   "secondary-gradient-end": "#58a6ff",
+  "highlight-color": "#ff6a00",
+  "shadow-color": "#000000",
+  "muted-color": "#6e7681",
+  "link-color": "#58a6ff",
+  "link-hover-color": "#58a6ff",
+  "link-active-color": "#58a6ff",
+  "link-visited-color": "#58a6ff",
 };

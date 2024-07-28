@@ -31,8 +31,18 @@ $secondary-gradient-start: #1f6feb;
 // 次渐变结束色
 $secondary-gradient-end: #58a6ff;
 
+// 新增颜色变量
+$highlight-color: #ffeb3b; // 高亮色
+$shadow-color: rgba(0, 0, 0, 0.2); // 阴影色
+$muted-color: #6c757d; // 淡化色
+
+// 链接颜色
+$link-color: #007bff; // 链接色
+$link-hover-color: #0056b3; // 链接悬停色
+$link-active-color: #0056b3; // 链接激活色
+$link-visited-color: #4a90e2; // 链接访问色
+
 :root {
-  // 主题颜色变量
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
   --success-color: #{$success-color};
@@ -49,4 +59,11 @@ $secondary-gradient-end: #58a6ff;
   --primary-gradient-end: #{$primary-gradient-end};
   --secondary-gradient-start: #{$secondary-gradient-start};
   --secondary-gradient-end: #{$secondary-gradient-end};
+  --highlight-color: #{$highlight-color};
+  --shadow-color: #{$shadow-color};
+  --muted-color: #{$muted-color};
+  --link-color: #{$link-color};
+  --link-hover-color: #{$link-hover-color};
+  --link-active-color: #{$link-active-color};
+  --link-visited-color: #{$link-visited-color};
 }

@@ -15,18 +15,40 @@ export interface ThemeProps {
   "primary-gradient-end": string;
   "secondary-gradient-start": string;
   "secondary-gradient-end": string;
+  "highlight-color": string;
+  "shadow-color": string;
+  "muted-color": string;
+  "link-color": string;
+  "link-hover-color": string;
+  "link-active-color": string;
+  "link-visited-color": string;
 }
+
+export interface ComponentThemeProps {
+  "btn-bg-color-success": string;
+  "btn-bg-color-danger": string;
+  "btn-bg-color-warning": string;
+  "btn-bg-color-info": string;
+  "avatar-bg-color-info": string;
+  "avatar-bg-color-success": string;
+  "avatar-bg-color-danger": string;
+  "avatar-bg-color-warning": string;
+  "card-bg-color": string;
+  "card-border-color": string;
+}
+
+export type ComponentTheme = Partial<ComponentThemeProps> & ThemeProps;
 
 export type SupportTheme = "github-dark";
 
 export type DefaultTheme = "light" | "dark";
 
 export type CustomBilingualTheme = {
-  [key in DefaultTheme]: ThemeProps;
+  [key in DefaultTheme]: ComponentTheme;
 };
 
 export type ThemeMap = {
-  [key in keyof ThemeProps]: ThemeProps[key];
+  [key in keyof ComponentTheme]: ComponentTheme[key];
 };
 
 export type ConfigProviderThemeProps =

@@ -23,8 +23,6 @@ export const generateCSSVariables = (
 export const applyThemeStyles = async (theme: Theme) => {
   const themeStyles = document.documentElement.style;
 
-  console.log("theme:", theme);
-
   if (typeof theme === "string") {
     switch (theme) {
       case "light":
