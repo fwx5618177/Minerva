@@ -85,9 +85,6 @@ pnpm test
 pnpm sample:start
 ```
 
-### Generate and deploy documentation
+## TODO
 
-```bash
-pnpm docs:build
-pnpm docs:serve
-```
+- [ ] Page Performance
