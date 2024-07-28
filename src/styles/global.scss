@@ -1,23 +1,7 @@
 @import "./variables.scss";
+@import "./default-theme.scss";
 
 :root {
-  --primary-color: #667eea;
-  --secondary-color: #42e695;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
-  --light-color: #1a202c;
-  --dark-color: #f8f9fa;
-  --background-color: #1a202c;
-  --foreground-color: #ffffff;
-  --border-color: #2d3748;
-  --text-gray: #a0aec0;
-  --primary-gradient-start: #6a11cb;
-  --primary-gradient-end: #2575fc;
-  --secondary-gradient-start: #42e695;
-  --secondary-gradient-end: #3bb2b8;
-
   --font-family-base: #{$font-family-base};
   --line-height-base: #{$line-height-base};
   --font-weight-normal: #{$font-weight-normal};
