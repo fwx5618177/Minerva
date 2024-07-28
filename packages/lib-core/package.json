@@ -1,0 +1,21 @@
+{
+  "name": "@minerva/lib-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/index.css",
+  "scripts": {
+    "release": "standard-version",
+    "build": "vite build",
+    "test": "jest --config .jest.config.js --no-cache --coverage",
+    "clean": "rimraf dist node_modules",
+    "clean:cache": "rimraf dist src/dist src/**/dist src/**/**/dist",
+    "lint": "eslint \"{src}/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write 'src/**/*.{ts,tsx,scss}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

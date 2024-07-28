@@ -1,9 +1,21 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import typescript from "@rollup/plugin-typescript";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      ...typescript({
+        tsconfig: path.resolve(__dirname, "tsconfig.json"),
+        declaration: true,
+        declarationDir: path.resolve(__dirname, "dist"),
+        rootDir: path.resolve(__dirname, "src"),
+      }),
+      apply: "build",
+    },
+  ],
   resolve: {
     alias: {
       "@components": path.resolve(__dirname, "src/components"),
@@ -28,12 +40,15 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          "react-native": "ReactNative",
         },
-        dir: "lib",
-        format: "esm",
+        entryFileNames: "index.[format].js",
+        chunkFileNames: "chunks/[name]-[hash].js",
+        dir: "dist",
+        exports: "named",
       },
     },
+    cssCodeSplit: true,
+    outDir: "dist",
   },
   css: {
     preprocessorOptions: {
@@ -42,10 +57,5 @@ export default defineConfig({
         includePaths: [path.resolve(__dirname, "src/styles")],
       },
     },
-  },
-  server: {
-    port: 3000,
-    open: true,
-    host: "127.0.0.1",
   },
 });

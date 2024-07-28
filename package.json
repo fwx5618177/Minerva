@@ -1,24 +1,20 @@
 {
   "name": "minerva",
-  "version": "1.0.0",
   "description": "",
   "scripts": {
-    "release": "standard-version",
-    "build:lib": "vite build",
-    "build": "vite build --config sample/vite.config.ts",
-    "dev": "vite --config sample/vite.config.ts",
-    "serve": "vite preview --config sample/vite.config.ts",
-    "format": "prettier --write 'src/**/*.{ts,tsx,scss}'",
-    "lint": "eslint \"{src,sample}/**/*.{js,ts,tsx}\"",
-    "test": "jest --config .jest.config.js --no-cache",
-    "test:update": "jest --config .jest.config.js --no-cache --update-snapshot",
-    "test:coverage": "jest test --coverage",
-    "clean:cache": "rimraf src/dist src/**/dist src/**/**/dist sample/dist sample/**/dist sample/**/**/dist config/dist config/**/dist config/**/**/dist",
-    "clean": "rimraf dist lib node_modules"
+    "release": "pnpm run release -r ./lib-core",
+    "dev": "pnpm --filter @minerva/sample dev",
+    "serve": "pnpm --filter @minerva/sample serve",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r clean && rimraf node_modules",
+    "clean:cache": "pnpm -r clean:cache",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "i18next": "^23.12.2",
     "react": "^18.3.1",
@@ -36,6 +32,7 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.8.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/enzyme": "^3.10.18",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.12",
@@ -54,6 +51,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.7",
+    "pnpm": "^9.6.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "sass": "^1.77.8",
