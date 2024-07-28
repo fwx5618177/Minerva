@@ -1,4 +1,9 @@
-import { CustomBilingualTheme, Theme } from "@contexts/types";
+import {
+  CustomBilingualTheme,
+  DefaultTheme,
+  SupportTheme,
+  Theme,
+} from "@contexts/types";
 
 /**
  * Generate CSS variables from theme object
@@ -22,22 +27,20 @@ export const generateCSSVariables = (
  */
 export const applyThemeStyles = async (theme: Theme) => {
   const themeStyles = document.documentElement.style;
+  const supportedThemes = ["light", "dark", "github-dark"];
 
   if (typeof theme === "string") {
-    switch (theme) {
-      case "light":
-        await import("@styles/themes/light.module.scss");
-        break;
-      case "dark":
-        await import("@styles/themes/dark.module.scss");
-        break;
-      case "github-dark":
-        await import("@styles/themes/github-dark.module.scss");
-        break;
-      default:
-        throw new Error(
-          "Unsupported theme, please check your theme configuration",
-        );
+    if (supportedThemes.includes(theme)) {
+      const importedTheme = await import("@styles/themes");
+
+      generateCSSVariables(
+        themeStyles,
+        importedTheme[theme as keyof SupportTheme & DefaultTheme],
+      );
+    } else {
+      throw new Error(
+        "Unsupported theme, please check your theme configuration",
+      );
     }
   } else if (
     (theme as CustomBilingualTheme).light &&

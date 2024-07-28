@@ -1,0 +1,21 @@
+{
+  "name": "@minerva/sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite preview",
+    "build": "vite build",
+    "test": "jest --config .jest.config.js --no-cache --coverage",
+    "clean": "rimraf dist node_modules",
+    "clean:cache": "rimraf src/dist src/**/dist src/**/**/dist",
+    "lint": "eslint \"{src}/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write 'src/**/*.{ts,tsx,scss}'"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@minerva/lib-core": "workspace:^"
+  },
+  "author": "",
+  "license": "ISC"
+}

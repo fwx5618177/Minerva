@@ -1,0 +1,89 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    padding: 0.5rem;
+  }
+}
+
+.sidebar {
+  width: 16rem;
+  padding: 1rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebarTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebarDescription {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.nav {
+  margin-bottom: 1rem;
+}
+
+.navHeader {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.navItem {
+  color: var(--text-gray);
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerTitle {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sectionDescription {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
