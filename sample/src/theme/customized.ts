@@ -1,0 +1,18 @@
+export const Skeleton = {
+  "primary-color": "#58a6ff",
+  "secondary-color": "#1f6feb",
+  "success-color": "#56d364",
+  "danger-color": "#f85149",
+  "warning-color": "#d29922",
+  "info-color": "#3b82f6",
+  "light-color": "#0d1117",
+  "dark-color": "#c9d1d9",
+  "background-color": "#010409",
+  "foreground-color": "#c9d1d9",
+  "border-color": "#30363d",
+  "text-gray": "#8b949e",
+  "primary-gradient-start": "#58a6ff",
+  "primary-gradient-end": "#1f6feb",
+  "secondary-gradient-start": "#1f6feb",
+  "secondary-gradient-end": "#58a6ff",
+};

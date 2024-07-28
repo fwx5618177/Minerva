@@ -1,6 +1,6 @@
 .card {
-  background-color: $border-color;
-  border-radius: $border-radius;
+  background-color: var(--border-color);
+  border-radius: var(--border-radius);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -26,5 +26,5 @@
 .cardContent {
   padding: 1rem;
   flex: 1;
-  background-color: lighten($border-color, 10%);
+  background-color: lighten(var(--border-color), 10%);
 }

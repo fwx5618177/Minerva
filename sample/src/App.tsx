@@ -1,42 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Avatar from "@components/Avatar";
-import { AvatarGroup } from "@components/Avatar";
 import { LogInIcon, MailsIcon, SearchIcon } from "@components/UI/icons";
 
-import "@styles/app.module.scss";
-import { ThemeProvider, useTheme } from "@contexts/ThemeContext";
+import "./styles/app.module.scss";
 
 const App: React.FC = () => {
-  const { theme, setTheme } = useTheme();
-
-  console.log("theme:", theme);
-
-  const applyCustomTheme = () => {
-    const customTheme = {
-      "primary-color": "#58a6ff",
-      "secondary-color": "#1f6feb",
-      "success-color": "#56d364",
-      "danger-color": "#f85149",
-      "warning-color": "#d29922",
-      "info-color": "#3b82f6",
-      "light-color": "#0d1117",
-      "dark-color": "#c9d1d9",
-      "background-color": "#010409",
-      "foreground-color": "#c9d1d9",
-      "border-color": "#30363d",
-      "text-gray": "#8b949e",
-      "primary-gradient-start": "#58a6ff",
-      "primary-gradient-end": "#1f6feb",
-      "secondary-gradient-start": "#1f6feb",
-      "secondary-gradient-end": "#58a6ff",
-    };
-    setTheme("custom", customTheme);
-  };
-
-  useEffect(() => {
-    applyCustomTheme();
-  });
-
   return (
     <div className="container">
       <aside className="sidebar">
@@ -82,10 +50,10 @@ const App: React.FC = () => {
           <h1 className="headerTitle">Material UI components</h1>
           <div className="headerButtons">
             <button className="iconButton">
-              <SearchIcon className="icon" />
+              {/* <SearchIcon className="icon" /> */}
             </button>
             <button className="iconButton">
-              <MailsIcon className="icon" />
+              {/* <MailsIcon className="icon" /> */}
             </button>
             <Avatar src="/placeholder-user.jpg" />
           </div>
@@ -93,7 +61,7 @@ const App: React.FC = () => {
         <section className="section">
           <div className="sectionHeader">
             <div className="iconWrapper">
-              <LogInIcon className="iconLarge" />
+              {/* <LogInIcon className="iconLarge" /> */}
             </div>
             <div>
               <h2 className="sectionTitle">
