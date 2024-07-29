@@ -1,0 +1,12 @@
+{
+  "website.title": "Minerva",
+  "lib.name": "Minerva Components",
+  "lib.description": "A comprehensive library of beautifully designed React components for your web applications.",
+  "lib.get-started": "Get Started",
+  "lib.learn-more": "Learn More",
+  "lib.see-all-components": "See All Components",
+  "lib.about": "About Minerva Components",
+  "lib.about.description": "Acme Components is a collection of high-quality, customizable React components that can help you build modern and visually appealing web applications. Our components are designed with simplicity, flexibility, and accessibility in mind, making it easy for developers to integrate them into their projects.",
+  "lib.installation": "Installation",
+  "lib.installation.description": "To get started with Acme Components, you can install the package using your preferred package manager:"
+}

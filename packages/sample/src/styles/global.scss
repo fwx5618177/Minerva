@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+@import "./default-light-theme.scss";
+
+* {
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+}
+
+body {
+  font-family: var(--font-family-base); // 基础字体
+  font-size: var(--font-size-base); // 基础字体大小
+  line-height: var(--line-height-base); // 基础行高
+  color: var(--text-color); // 前景色
+  background-color: var(--background-color); // 背景色
+  margin: 0; // 清除默认边距
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; // 背景色和文字颜色的过渡效果
+}
+
+a {
+  color: var(--link-color); // 链接文字颜色
+
+  &:hover {
+    color: var(--link-hover-color); // 鼠标悬停时的链接文字颜色
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base); // 标题字体
+  color: var(--dark-color); // 标题颜色
+}

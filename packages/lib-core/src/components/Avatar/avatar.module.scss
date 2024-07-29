@@ -1,0 +1,46 @@
+.avatar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: 50%;
+  background-color: var(--avatar-bg-color-info);
+  width: 3rem;
+  height: 3rem;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.avatarSquare {
+  border-radius: 0.25rem;
+}
+
+.avatarImg {
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  user-select: none;
+}
+
+.avatarText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: calc(var(--font-size-base) * 0.875);
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0.65);
+  white-space: nowrap;
+  user-select: none;
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    font-size: calc(var(--font-size-base) * 0.875 * map-get($scale-multiplier, xs));
+  }
+}

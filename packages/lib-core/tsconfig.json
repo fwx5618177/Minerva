@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@styles/*": ["src/styles/*"],
+      "@platforms/*": ["src/platforms/*"],
+      "@wasm/*": ["src/wasm/*"],
+      "@versioning/*": ["src/versioning/*"],
+      "@config/*": ["src/config/*"],
+      "@contexts/*": ["src/contexts/*"]
+    }
+  },
+  "include": ["src", "src/global.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

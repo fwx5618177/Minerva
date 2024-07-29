@@ -1,0 +1,30 @@
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--component-box-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--foreground-color);
+}
+
+.cardDescription {
+  font-size: calc(var(--font-size-base) * 0.875);
+  color: var(--text-gray);
+}
+
+.cardContent {
+  padding: 1rem;
+  flex: 1;
+  background-color: var(--card-bg-color-content);
+}

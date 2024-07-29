@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #4a90e2; // 主色
+  --secondary-color: #50e3c2; // 次色
+  --success-color: #7ed321; // 成功色
+  --danger-color: #d0021b; // 危险色
+  --warning-color: #f5a623; // 警告色
+  --info-color: #4a90e2; // 信息色
+  --light-color: #f7f7f7; // 浅色
+  --dark-color: #4a4a4a; // 深色
+  --background-color: #ffffff; // 背景色
+  --foreground-color: #333333; // 前景色
+  --border-color: #e1e1e1; // 边框色
+  --text-gray: #9b9b9b; // 灰色文本
+  --primary-gradient-start: #6a11cb; // 主渐变起始色
+  --primary-gradient-end: #2575fc; // 主渐变结束色
+  --secondary-gradient-start: #42e695; // 次渐变起始色
+  --secondary-gradient-end: #3bb2b8; // 次渐变结束色
+  --highlight-color: #ffeb3b; // 高亮色
+  --shadow-color: rgba(0, 0, 0, 0.2); // 阴影色
+  --muted-color: #6c757d; // 淡化色
+  --link-color: #007bff; // 链接色
+  --link-hover-color: #0056b3; // 链接悬停色
+  --link-active-color: #0056b3; // 链接激活色
+  --link-visited-color: #4a90e2; // 链接访问色
+}

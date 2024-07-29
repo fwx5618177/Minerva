@@ -4,5 +4,21 @@
     "doubleQuote": true,
     "trailingComma": "all",
     "printWidth": 80,
-    "tabWidth": 2
+    "tabWidth": 2,
+    "endOfLine": "auto",
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": {
+                "printWidth": 200
+            }
+        },
+        {
+            "files": "*.scss",
+            "options": {
+                "printWidth": 200,
+                "endOfLine": "auto"
+            }
+        }
+    ]
 }

@@ -1,0 +1,29 @@
+.avatarGroup {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    flex-direction: column;
+  }
+}
+
+.avatarGroupItem {
+  margin-left: calc(var(--font-size-base) * 0.625);
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    margin-left: 0;
+    margin-bottom: map-get($spacers, 1);
+  }
+}
+
+.count {
+  font-size: calc(var(--font-size-base) * 0.875);
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  color: var(--secondary-color);
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    font-size: calc(var(--font-size-base) * 0.75);
+  }
+}
