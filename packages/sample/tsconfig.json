@@ -19,5 +19,5 @@
       "@components/*": ["src/components/*"]
     }
   },
-  "include": ["src", "src/global.d.ts"]
+  "include": ["src", "global.d.ts"]
 }
