@@ -11,6 +11,8 @@ export default defineConfig({
       "@utils": path.resolve(__dirname, "src/utils"),
       "@styles": path.resolve(__dirname, "src/styles"),
       "@config": path.resolve(__dirname, "src/config"),
+      "@i18n": path.resolve(__dirname, "src/i18n"),
+      "@components": path.resolve(__dirname, "src/components"),
     },
   },
   build: {

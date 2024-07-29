@@ -1,19 +1,23 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+
+// import { ConfigProvider } from "@minerva/lib-core";
+
 import App from "./App";
 
-import "@config/i18n";
+import "@i18n";
 import "@styles/global.scss";
 
 import "@minerva/lib-core/dist/index.css";
-
-import { ConfigProvider } from "@minerva/lib-core";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
 
 root.render(
-  <ConfigProvider theme={"dark"}>
+  // <ConfigProvider>
+  <BrowserRouter>
     <App />,
-  </ConfigProvider>,
+  </BrowserRouter>,
+  // </ConfigProvider>,
 );

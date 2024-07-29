@@ -1,89 +1,79 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+// 按钮样式
+.btn {
+  &-success {
+    background-color: var(--success-color);
+    &:hover {
+      background-color: var(--btn-bg-color-hover);
+    }
+    &:active {
+      background-color: var(--btn-bg-color-active);
+    }
+  }
 
-  @media (max-width: map-get($breakpoints, sm)) {
-    padding: 0.5rem;
+  &-danger {
+    background-color: var(--danger-color);
+    &:hover {
+      background-color: var(--btn-bg-color-hover);
+    }
+    &:active {
+      background-color: var(--btn-bg-color-active);
+    }
+  }
+
+  &-warning {
+    background-color: var(--warning-color);
+    &:hover {
+      background-color: var(--btn-bg-color-hover);
+    }
+    &:active {
+      background-color: var(--btn-bg-color-active);
+    }
+  }
+
+  &-info {
+    background-color: var(--info-color);
+    &:hover {
+      background-color: var(--btn-bg-color-hover);
+    }
+    &:active {
+      background-color: var(--btn-bg-color-active);
+    }
   }
 }
 
-.sidebar {
-  width: 16rem;
-  padding: 1rem;
-  border-right: 1px solid var(--border-color);
+// 头像样式
+.avatar {
+  &-info {
+    background-color: var(--avatar-bg-color-info);
+  }
+
+  &-success {
+    background-color: var(--avatar-bg-color-success);
+  }
+
+  &-danger {
+    background-color: var(--avatar-bg-color-danger);
+  }
+
+  &-warning {
+    background-color: var(--avatar-bg-color-warning);
+  }
 }
 
-.sidebarTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+// 卡片样式
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+
+  &-content {
+    background-color: var(--card-bg-color-content);
+  }
 }
 
-.sidebarDescription {
-  font-size: 0.875rem;
-  color: var(--text-gray);
-  margin-bottom: 0.5rem;
+.accordion-down {
+  animation: accordion-down 0.2s ease-out;
 }
 
-.nav {
-  margin-bottom: 1rem;
-}
-
-.navHeader {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.navItem {
-  color: var(--text-gray);
-}
-
-.main {
-  flex: 1;
-  padding: 1.5rem;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.headerTitle {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.headerButtons {
-  display: flex;
-  gap: 1rem;
-}
-
-.section {
-  margin-bottom: 1.5rem;
-}
-
-.sectionHeader {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.sectionTitle {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.sectionDescription {
-  font-size: 0.875rem;
-  color: var(--text-gray);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+.accordion-up {
+  animation: accordion-up 0.2s ease-out;
 }
