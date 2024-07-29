@@ -10,8 +10,8 @@ export const themes: ThemeConfig = {
     "--info-color": "#17a2b8",
     "--light-color": "#1a202c",
     "--dark-color": "#f8f9fa",
-    "--background-color": "#1a202c",
-    "--foreground-color": "#ffffff",
+    "--background-color": "#ffffff",
+    "--foreground-color": "#1a202c",
     "--border-color": "#2d3748",
     "--text-gray": "#a0aec0",
     "--primary-gradient-start": "#6a11cb",
@@ -31,9 +31,9 @@ export const themes: ThemeConfig = {
     "--avatar-bg-color-success": "#28a745",
     "--avatar-bg-color-danger": "#dc3545",
     "--avatar-bg-color-warning": "#ffc107",
-    "--card-bg-color": "#1a202c",
-    "--card-foreground-color": "#ffffff",
-    "--card-bg-color-content": "lighten(#1a202c, 10%)",
+    "--card-bg-color": "#ffffff",
+    "--card-foreground-color": "#1a202c",
+    "--card-bg-color-content": "lighten(#ffffff, 10%)",
     "--card-border-color": "#2d3748",
     "--popover-bg-color": "#ffffff",
     "--popover-foreground-color": "#1a202c",
@@ -73,17 +73,44 @@ export const themes: ThemeConfig = {
     "--card-foreground-color": "#e1e1e1",
     "--card-bg-color-content": "lighten(#333333, 10%)",
     "--card-border-color": "#e1e1e1",
-    "--popover-bg-color": "#ffffff",
-    "--popover-foreground-color": "#1a202c",
+    "--popover-bg-color": "#333333",
+    "--popover-foreground-color": "#e1e1e1",
     "--radius": "0.25rem",
   },
 };
 
-export function applyTheme(themeName: Theme) {
+export function applyTheme(themeName?: Theme) {
+  if (!themeName) {
+    // 自动切换颜色
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        Object.entries(themes.dark).forEach(([key, value]) => {
+          document.documentElement.style.setProperty(key, value);
+        });
+      } else {
+        Object.entries(themes.light).forEach(([key, value]) => {
+          document.documentElement.style.setProperty(key, value);
+        });
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    // 初始化时的主题设置
+    if (mediaQuery.matches) {
+      Object.entries(themes.dark).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+      });
+    } else {
+      Object.entries(themes.light).forEach(([key, value]) => {
+        document.documentElement.style.setProperty(key, value);
+      });
+    }
+    return;
+  }
+
   const theme = themes[themeName];
-
-  if (!theme) return;
-
   Object.entries(theme).forEach(([key, value]) => {
     document.documentElement.style.setProperty(key, value);
   });

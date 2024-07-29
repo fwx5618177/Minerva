@@ -11,28 +11,31 @@ import {
   MountainIcon,
 } from "../Icons";
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Sidebar: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebar__header}>
         <Link to="#" className={styles.sidebar__brand}>
           <MountainIcon className={styles.icon} />
-          <span>Acme Components</span>
+          <span>{t("lib.name")}</span>
         </Link>
       </div>
       <nav className={styles.sidebar__nav}>
         <Link to="#" className={styles.sidebar__link}>
           <HomeIcon className={styles.icon} />
-          Introduction
+          {t("menu:introduction")}
         </Link>
         <Link to="#" className={styles.sidebar__link}>
           <DownloadIcon className={styles.icon} />
-          Installation
+          {t("menu:installation")}
         </Link>
         <Link to="#" className={styles.sidebar__link}>
           <CodeIcon className={styles.icon} />
-          Usage
+          {t("menu:usage")}
         </Link>
         <Link to="#" className={styles.sidebar__link}>
           <LayoutGridIcon className={styles.icon} />

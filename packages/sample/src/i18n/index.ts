@@ -12,7 +12,7 @@ const resources = {
 i18n.use(initReactI18next).init({
   resources,
   lng: "en",
-  ns: ["index", "common", "buttons"],
+  ns: ["index", "common", "buttons", "menu"],
   defaultNS: "index",
   interpolation: {
     escapeValue: false,

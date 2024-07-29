@@ -1,5 +1,7 @@
 @import "./variables.scss";
 
+@import "./default-light-theme.scss";
+
 * {
   box-sizing: border-box;
   border: 1px solid var(--border);
@@ -9,7 +11,7 @@ body {
   font-family: var(--font-family-base); // 基础字体
   font-size: var(--font-size-base); // 基础字体大小
   line-height: var(--line-height-base); // 基础行高
-  color: var(--foreground-color); // 前景色
+  color: var(--text-color); // 前景色
   background-color: var(--background-color); // 背景色
   margin: 0; // 清除默认边距
   transition:

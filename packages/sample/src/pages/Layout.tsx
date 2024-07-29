@@ -8,10 +8,12 @@ interface LayoutProps {
   theme?: Theme;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, theme = "light" }) => {
-  useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
+const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
+  // TODO: Uncomment this code to apply the theme
+
+  // useEffect(() => {
+  //   applyTheme(theme);
+  // }, [theme]);
 
   return <div>{children}</div>;
 };

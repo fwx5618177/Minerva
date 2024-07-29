@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <header className={styles.header}>
       <div className={styles.header__content}>
-        <h1>Acme Components</h1>
-        <p>
-          A comprehensive library of beautifully designed React components for
-          your web applications.
-        </p>
+        <h1>{t("lib.name")}</h1>
+        <p>{t("lib.description")}</p>
       </div>
     </header>
   );
