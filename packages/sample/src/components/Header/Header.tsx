@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__content}>
+      <div className={styles.content}>
         <h1>{t("lib.name")}</h1>
         <p>{t("lib.description")}</p>
       </div>

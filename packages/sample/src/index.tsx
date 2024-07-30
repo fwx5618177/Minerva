@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
-import "@i18n";
+import "@i18n/index";
 import "@styles/global.scss";
 
 import "@minerva/lib-core/dist/index.css";

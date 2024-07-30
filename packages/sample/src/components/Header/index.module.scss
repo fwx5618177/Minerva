@@ -1,16 +1,19 @@
 .header {
-  background-color: var(--primary-color);
+  background-color: var(--header-bg-color);
   padding: 20px;
-  color: var(--primary-foreground);
+  color: var(--text-title-description-color);
 
-  &__content {
+  &content {
     max-width: 800px;
     margin: 0 auto;
   }
 
   h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+    color: #09090b;
   }
 
   p {
